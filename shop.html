@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="shop.css" />
-    <title>Document</title>
+    <title>Cart System</title>
   </head>
   <body>
     <header>
@@ -52,11 +52,17 @@
 
       <div class="item item1">
         <img src="shake1.png" alt="shake1" />
+
         <h2>Strawberry Shake</h2>
+
         <p class="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
-        <h3>12.99$</h3>
+
+        <h3>
+          <span class="h3price">12.99</span> <span class="h3dollar">$</span>
+        </h3>
+
         <button class="add-to-cart">Add To Cart</button>
       </div>
 
@@ -66,29 +72,44 @@
         <p class="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
-        <h3>10.99$</h3>
+        <h3>
+          <span class="h3price">10.99</span> <span class="h3dollar">$</span>
+        </h3>
+        <button class="add-to-cart">Add To Cart</button>
+      </div>
+
+      <div class="item item3">
+        <img src="shake4.png" alt="shake1" />
+        <h2>caramel Shake</h2>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <h3>
+          <span class="h3price">14.99</span> <span class="h3dollar">$</span>
+        </h3>
         <button class="add-to-cart">Add To Cart</button>
       </div>
     </div>
 
-    <div class="edit-pop-up"></div>
+    <div class="edit-pop-up hidden">
+      <div class="remove-container">
+        <div class="remove-edit-pop-up"></div>
+      </div>
+      <div class="edit-center">
+        <form id="form"></form>
+      </div>
+    </div>
 
-    <div class="cart-pop-up-container">
-      <div class="cart-pop-up">
-        <div class="x"><button>x</button></div>
+    <div class="cart-pop-up-background">
+      <div class="cart-pop-up-container">
+        <div class="cart-items-pop-up">
+          <div class="x"><button>x</button></div>
+        </div>
 
-          <div class="cart-item item">
-            <img src="shake1.png" alt="shake1" />
-            <h2>Strawberry Shake</h2>
-            <h3 class="price">12.99$</h3>
-
-            <div class="controls">
-              <button class="remove">-</button>
-              <div class="amount"><p class="amountnb"></p></div>
-              <button class="add">+</button>
-            </div>
-          </div>
-
+        <div class="total">
+          <p>Total:</p>
+          <p class="price">0</p>
+        </div>
       </div>
     </div>
 
