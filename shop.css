@@ -7,7 +7,7 @@
 
 * {
   box-sizing: border-box;
-  /* border:2px red solid; */
+  border:2px red solid;
 }
 html {
   max-width: 100%;
@@ -37,35 +37,39 @@ a {
   color: black;
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+  font-size: 1rem;
+  /* width: clamp(3rem, 2vw, 4rem);  */
+  min-width: 0;
+  cursor: pointer;
+}
+
 .top-viewables {
   width: 100%;
   height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  /* margin-top: 1rem; */
+  padding-left: clamp(1rem, 5vw, 3rem); 
+  padding-right: clamp(1rem, 5vw, 3rem);
   margin-bottom: 1rem;
 }
 
+
 .navbar {
   display: flex;
-  gap: 2rem;
+  gap: clamp(0.5rem, 2vw, 1.5rem); 
+  flex-wrap: wrap;            
+  align-items:center;
+ justify-content:right;
   padding-bottom: 3rem;
-  width: 40%;
-  min-width: 0;
-  padding-left: 2rem;
+  min-width: 0%;
+  width:66%;
+  padding-left: 0;             
 }
 
-button {
-  border: 0;
-  background-color: transparent;
-  font-size: 1rem;
-  width: (3rem, 2vw, 4rem);
-  min-width: 0;
-  cursor: pointer;
-}
 
 .main-logo {
   width: clamp(2rem, 3vw, 6rem);
