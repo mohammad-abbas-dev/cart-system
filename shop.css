@@ -444,9 +444,9 @@ button {
 
 .edit-center .input {
   border-radius: 10px;
-  width: 50%;
+  width: 60%;
   min-width: 0;
-  height: 3rem;
+  height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
