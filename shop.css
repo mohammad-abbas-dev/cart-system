@@ -25,11 +25,9 @@ body {
   font-family: roboto;
   z-index: 0;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap:wrap;
+ 
 }
+
 
 header {
   width: 100%;
@@ -157,8 +155,8 @@ button {
 .edit-pop-up::before {
   content: "";
   position: absolute;
-  width: 200vw;
-  height: 200vh;
+  width: auto;
+  height: auto;
   background: rgba(255, 255, 255, 0.674);
   /* transform:translate(-25%,-13%); */
   top: -50%;
