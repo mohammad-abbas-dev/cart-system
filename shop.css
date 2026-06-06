@@ -145,7 +145,7 @@ button {
 }
 .edit-pop-up {
   width: 50%;
-  height: 75vh;
+  height: 60%;
   background: whitesmoke;
   box-shadow: 4px 4px 10px black;
   position: fixed;
