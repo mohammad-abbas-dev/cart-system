@@ -220,12 +220,9 @@ additem.addEventListener("click", function () {
     apply.style.display = "none";
   });
   changeImg.addEventListener("change", function (e) {
-     if (!changeImg.type.startsWith('image/')) {
-        alert('Error: Only images are allowed!');
-        this.value = null; // Clear the input
-    }
+    
     let file = changeImg.files[0];
-    let reader = new FileReader();
+    let reader = new FileReader();`p`
     let url = reader.readAsDataURL(file);
     reader.addEventListener("load", function () {
       newitemImg.src = reader.result;
@@ -235,7 +232,7 @@ additem.addEventListener("click", function () {
 
   apply.addEventListener("click", function () {
 
-    if(changeDescription.value =="" || changeHeading.value==""||changePrice.value==""||changeImg.files.length==0){
+    if(changeDescription.value =="" || changeHeading.value==""||changePrice.value==""){
       alert("Hmm.. Something is Missing")
        return
     }
