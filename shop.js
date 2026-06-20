@@ -19,8 +19,14 @@ x.addEventListener("click", () => {
 });
 
 menu.addEventListener("click", function (e) {
+  let pressed = e.target;
+  if (pressed.classList.contains("pressed")) {
+    return;
+  }
+  pressed.classList.add("pressed");
+  
   if (e.target.classList.contains("add-to-cart")) {
-    let item = e.target.closest(".item"); // heres the closest item to add to cart button like document.quersel(".item")
+    let item = e.target.closest(".item");
 
     let newcartitem = document.createElement("div");
     newcartitem.classList.add("cart-item");
@@ -142,12 +148,6 @@ menu.addEventListener("click", function (e) {
       let totalprice = totaldiv.querySelector(".price");
       totalprice.textContent = total.toFixed(2) + "$";
     }
-
-    let pressed = e.target;
-    if (pressed.classList.contains("pressed")) {
-      return;
-    }
-    pressed.classList.add("pressed");
   }
 });
 
@@ -220,9 +220,9 @@ additem.addEventListener("click", function () {
     apply.style.display = "none";
   });
   changeImg.addEventListener("change", function (e) {
-    
     let file = changeImg.files[0];
-    let reader = new FileReader();`p`
+    let reader = new FileReader();
+    `p`;
     let url = reader.readAsDataURL(file);
     reader.addEventListener("load", function () {
       newitemImg.src = reader.result;
@@ -231,12 +231,15 @@ additem.addEventListener("click", function () {
   let newcartitembutton = document.createElement("button");
 
   apply.addEventListener("click", function () {
-
-    if(changeDescription.value =="" || changeHeading.value==""||changePrice.value==""){
-      alert("Hmm.. Something is Missing")
-       return
+    if (
+      changeDescription.value == "" ||
+      changeHeading.value == "" ||
+      changePrice.value == ""
+    ) {
+      alert("Hmm.. Something is Missing");
+      return;
     }
-    
+
     newcartitembutton.classList.add("add-to-cart");
     newcartitembutton.textContent = cartAdd[0].textContent;
     newitemH2.textContent = changeHeading.value;
