@@ -132,7 +132,7 @@ button {
 }
 .hero-button:hover {
   background: black;
-  color: whitesmoke;
+  color: white;
   transition: 0.5s;
 }
 
