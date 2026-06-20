@@ -135,6 +135,11 @@ button {
   color: white;
   transition: 0.5s;
 }
+.hero-button:hover a{
+ color:white;
+  transition: 0.5s;
+
+}
 
 /* header end ---------------------------------------------------*/
 
