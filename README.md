@@ -5,3 +5,6 @@ you can chose an item's pictue,name,description and price and its going to apply
 also the cart system works very well even for the newly added items doing correct calculations and showing in a nice way ! 
 
 this project enhanced my js skills very much!
+
+live demo:
+https://mohammad-abbas-dev.github.io/cart-system/
